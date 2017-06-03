@@ -4,8 +4,8 @@ var VideoListEntry = (videos) => (
       <img className="media-object" src={videos.video.snippet.thumbnails.default.url} alt="" />
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title">Video Title</div>
-      <div className="video-list-entry-detail">Video Description</div>
+      <div className="video-list-entry-title">{videos.video.snippet.title}</div>
+      <div className="video-list-entry-detail">{videos.video.snippet.description}</div>
     </div>
   </div>
 );
