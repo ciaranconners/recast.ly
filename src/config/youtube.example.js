@@ -1,2 +1,2 @@
 // Put your YouTube API keys here!
-window.YOUTUBE_API_KEY = 'AIzaSyA_ocyZARFoETAUWQ8HGrxG-9qEy7F-jG4';
+window.YOUTUBE_API_KEY = 'AIzaSyA18atZ7aeS67MULqh2CiPRvhJyyuUEHb0';

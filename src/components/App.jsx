@@ -1,12 +1,10 @@
-// AIzaSyA_ocyZARFoETAUWQ8HGrxG-9qEy7F-jG4
-
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      videoPlayer: window.exampleVideoData[0],
-      videoList: window.exampleVideoData
+      videoPlayer: null,
+      videoList: []
     };
   }
 
@@ -16,12 +14,10 @@ class App extends React.Component {
     });
   }
 
-
-
   render() {
     return (
       <div>
-      <Nav />
+      <Nav/>
         <div className="col-md-7">
           <VideoPlayer video={this.state.videoPlayer}/>
         </div>
@@ -33,6 +29,26 @@ class App extends React.Component {
       </div>
     );
   }
+
+
+  componentDidMount() {
+    this.getYouTubeVideos('cats and dogs');
+  }
+
+  getYouTubeVideos(query) {
+    var options = {
+      key: this.props.API_KEY,
+      query: query
+    };
+
+    this.props.searchYouTube(options, (videos) =>
+      this.setState({
+        videoList: videos,
+        videoPlayer: videos[0]
+      })
+    );
+  }
+
 }
 
 

@@ -3,7 +3,7 @@ var VideoList = ({videos, handleVideoStateChange}) => (
     {videos.map((video) =>
       <VideoListEntry
         video={video}
-        key={video.id.videoId}
+        key={video.etag}
         handleVideoStateChange={handleVideoStateChange}
       />)
     }
