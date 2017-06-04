@@ -1,14 +1,19 @@
-var VideoListEntry = (video) => (
+var VideoListEntry = ({video, handleVideoStateChange}) => (
   <div className="video-list-entry">
     <div className="media-left media-middle">
-      <img className="media-object" src={video.video.snippet.thumbnails.default.url} alt="" />
+      <img className="media-object" src={video.snippet.thumbnails.default.url} alt="" />
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title">{video.video.snippet.title}</div>
-      <div className="video-list-entry-detail">{video.video.snippet.description}</div>
+      <div
+        className="video-list-entry-title"
+        onClick={ () => { handleVideoStateChange(video); }}>
+        {video.snippet.title}</div>
+      <div className="video-list-entry-detail">{video.snippet.description}</div>
     </div>
   </div>
 );
+
+// onClick={App.onListItemClick.bind(this)
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
