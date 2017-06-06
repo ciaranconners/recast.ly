@@ -1,4 +1,4 @@
-window.YOUTUBE_API_KEY = 'AIzaSyA18atZ7aeS67MULqh2CiPRvhJyyuUEHb0';
+// window.YOUTUBE_API_KEY = 'AIzaSyAg5SuSYNtt5d3F2cgADi281arnU65u0gg';
 
 var searchYouTube = ({key, query, max = 5}, callback) => {
   // TODO
@@ -21,7 +21,6 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
       console.log(err);
     }
   });
-  console.log(window.YOUTUBE_API_KEY);
 };
 
 
